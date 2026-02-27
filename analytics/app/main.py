@@ -1,7 +1,6 @@
 import json
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from .routers.ui import router as ui_router
 from .controllers.student import router as student_router
 from .controllers.teacher import router as teacher_router
 from .controllers.mentor import router as mentor_router
@@ -19,4 +18,3 @@ app.include_router(teacher_router)
 app.include_router(mentor_router)
 app.include_router(admin_router)
 app.include_router(investor_router)
-app.include_router(ui_router)
